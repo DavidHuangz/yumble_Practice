@@ -1,0 +1,19 @@
+import React from "react";
+import "./Help.css";
+
+function Help(props) {
+  return props.trigger ? (
+    <div className="Help">
+      <div className="Help-inner">
+        <button className="CloseButton" onClick={() => props.setTrigger(false)}>
+          close
+        </button>
+        {props.children}
+      </div>
+    </div>
+  ) : (
+    ""
+  );
+}
+
+export default Help;
